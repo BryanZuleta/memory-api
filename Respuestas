@@ -1,0 +1,13 @@
+1. ¿Qué pasa cuando usted ejecuta este programa? R//: Imprime Segmentation fault (core dumped), pero una vez se le asigna NULL al apuntador,al no estar apuntando a nada, no puede realizar el cambio.
+
+2. ¿Qué muestra gdb? R//: Con el comando gdb, podemos ver a mas detaller el debug del código. Y si salta un error nos muestra la linea del mismo.
+
+3. ¿Qué pasa cuando corre esto?, ¿Puede usted interpretar la salida de la herramienta anterior? R//: Se puede interprestar la salida, valgrind informa sobre un error de segmentación (Segmentation fault). Adicionalmente ofrece el resumen del HEAP pero en este caso está vacío.
+
+4. ¿Qué pasa cuando este programa se ejecuta?, ¿Puede usted usar gdb para encontrar problemas como este?, ¿Que dice acerca de Valgrind (de nuevo use este con la bandera --leak check=yes)? R//: No hay problema con al ejecución normal del programa. Con gdb no, no informa de algun error. Ejecutando valgrind se ve una perdida de memoria
+
+5. ¿Qué pasa cuando este programa se ejecuta?, ¿Qué pasa cuando se corre el programa usando valgrind?, ¿El programa es correcto? R//: Se nota que ejecutando con valgrind el programa hay neuvamente uan fuga de memoria
+
+6. ¿El programa corre?, ¿Que pasa cuando hace uso de valgrind? R//: Sí, el programa se ejecuta sin errores. Ejecutando valgrind este indica que hay un error de lectura.
+
+7. ¿Qué pasa?, ¿Ústed necesita herramientas para encontrar este tipo de problemas? R//: Al ejecutar el codigo tenemos un problema por un apuntador invalido y aborta la ejecución. Ejecutando valgrind se logra ver los errores puntuales del apuntador invalido y así se logra hace run inicio.
